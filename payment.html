@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NxtGen | Payment</title>
+    <title>Luxorer | Payment</title>
     <link href="https://cdn.tailwindcss.com" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -581,7 +581,7 @@ section .grid > div p {
         <a href="https://luxorer.com/">
           <img
             src="/assets/ms.png"
-            alt="NxtGen"
+            alt="Luxorer"
             style="
               height: 50px;
               width: auto;
@@ -669,7 +669,7 @@ section .grid > div p {
         ).textContent = `₹${totalAmount.toFixed(2)}`;
         const upiID = "8587058042@nyes";
         const txnID = "TXN" + Math.floor(Math.random() * 10000000000);
-        const upiLink = `upi://pay?pa=${upiID}&pn=CPTraders&tr=${txnID}&am=${totalAmount.toFixed(2)}&cu=INR&tn=Payment%20for%20Order%20of%20NxtGenElectra`;
+        const upiLink = `upi://pay?pa=${upiID}&pn=CPTraders&tr=${txnID}&am=${totalAmount.toFixed(2)}&cu=INR&tn=Payment%20for%20Order%20of%20LuxorerElectra`;
         // const upiLink = `https://getupilink.com/upi/${upiID}?am=${totalAmount.toFixed(2)}`;
         document.getElementById("upi-payment-link").href = upiLink;
       }
