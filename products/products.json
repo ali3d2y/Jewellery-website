@@ -1,56 +1,92 @@
 [
   {
-    "name": "Necklace Set",
-    "price": 45999,
-    "image": "https://source.unsplash.com/400x400/?gold,necklace",
-    "description": "Traditional 22 Carat gold necklace set.<br/><i style=\"display:none; width:0; height:0;\"> Category: jewellery, necklace</i>"
+    "name": "Anti-Tarnish Layered Necklace",
+    "price": 999,
+    "image": "https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=600&auto=format&fit=crop&q=80",
+    "description": "Premium anti-tarnish layered necklace crafted from stainless steel with 18K gold plating. Waterproof, lightweight, hypoallergenic, and perfect for everyday wear.<br/><i style=\"display:none; width:0; height:0;\"> Category: anti tarnish jewellery, necklace</i>"
   },
   {
-    "name": "Diamond Solitaire Ring",
-    "price": 28999,
-    "image": "https://source.unsplash.com/400x400/?diamond,ring",
-    "description": "Elegant solitaire diamond ring in 18K white gold, certified diamond, ideal for engagements.<br/><i style=\"display:none; width:0; height:0;\"> Category: jewellery, ring</i>"
+    "name": "Anti-Tarnish Solitaire Ring",
+    "price": 699,
+    "image": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&auto=format&fit=crop&q=80",
+    "description": "Elegant anti-tarnish solitaire ring made from premium stainless steel with 18K gold plating. Waterproof, fade-resistant, and ideal for daily wear.<br/><i style=\"display:none; width:0; height:0;\"> Category: anti tarnish jewellery, ring</i>"
   },
   {
-    "name": "Sterling Silver Hoop Earrings",
-    "price": 1499,
-    "image": "https://source.unsplash.com/400x400/?silver,earrings",
-    "description": "925 Sterling Silver hoop earrings with cubic zirconia accents, lightweight and skin-friendly.<br/><i style=\"display:none; width:0; height:0;\"> Category: jewellery, earrings</i>"
+    "name": "Anti-Tarnish Hoop Earrings",
+    "price": 599,
+    "image": "https://images.unsplash.com/photo-1635767798638-3e25273a8236?w=600&auto=format&fit=crop&q=80",
+    "description": "Stylish anti-tarnish hoop earrings crafted from stainless steel with premium gold plating. Lightweight, waterproof, and skin-friendly.<br/><i style=\"display:none; width:0; height:0;\"> Category: anti tarnish jewellery, earrings</i>"
   },
   {
-    "name": "Gold Plated Bangle Set",
-    "price": 3999,
-    "image": "https://source.unsplash.com/400x400/?gold,bangle",
-    "description": "Set of 4 gold-plated bangles with antique finish, suitable for daily wear and special occasions.<br/><i style=\"display:none; width:0; height:0;\"> Category: jewellery, bangles</i>"
+    "name": "Anti-Tarnish Bangle Set",
+    "price": 899,
+    "image": "https://images.unsplash.com/photo-1626784215021-2e39ccf971cd?w=600&auto=format&fit=crop&q=80",
+    "description": "Set of four anti-tarnish bangles featuring premium stainless steel construction with long-lasting gold plating. Waterproof and ideal for everyday use.<br/><i style=\"display:none; width:0; height:0;\"> Category: anti tarnish jewellery, bangles</i>"
   },
   {
-    "name": "Freshwater Pearl Necklace",
-    "price": 5999,
-    "image": "https://source.unsplash.com/400x400/?pearl,necklace",
-    "description": "Classic freshwater pearl necklace, 3-strand design, elegant and timeless for formal wear.<br/><i style=\"display:none; width:0; height:0;\"> Category: jewellery, necklace</i>"
+    "name": "Pearl Layer Necklace",
+    "price": 1199,
+    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&auto=format&fit=crop&q=80",
+    "description": "Artificial pearl layered necklace with anti-tarnish stainless steel chain and premium gold plating. Elegant for parties and casual outfits.<br/><i style=\"display:none; width:0; height:0;\"> Category: anti tarnish jewellery, necklace</i>"
   },
   {
-    "name": "Rose Gold Pendant Set",
-    "price": 4499,
-    "image": "https://source.unsplash.com/400x400/?rosegold,pendant",
-    "description": "Rose gold-plated pendant with matching chain, minimal design suited for everyday and office wear.<br/><i style=\"display:none; width:0; height:0;\"> Category: jewellery, pendant</i>"
+    "name": "Anti-Tarnish Pendant Set",
+    "price": 799,
+    "image": "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=600&auto=format&fit=crop&q=80",
+    "description": "Minimal anti-tarnish pendant with matching chain made from stainless steel and premium gold plating. Waterproof and fade-resistant.<br/><i style=\"display:none; width:0; height:0;\"> Category: anti tarnish jewellery, pendant</i>"
   },
-    {
-    "name": "Rose Gold Pendant Set",
-    "price": 4499,
-    "image": "https://source.unsplash.com/400x400/?rosegold,pendant",
-    "description": "Rose gold-plated pendant with matching chain, minimal design suited for everyday and office wear.<br/><i style=\"display:none; width:0; height:0;\"> Category: jewellery, pendant</i>"
+  {
+    "name": "Anti-Tarnish Choker Necklace",
+    "price": 1299,
+    "image": "https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=600&auto=format&fit=crop&q=80",
+    "description": "Trendy anti-tarnish choker necklace with premium stainless steel base and 18K gold plating. Waterproof, lightweight, and fashionable.<br/><i style=\"display:none; width:0; height:0;\"> Category: anti tarnish jewellery, choker</i>"
   },
-    {
-    "name": "Rose Gold Pendant Set",
-    "price": 4499,
-    "image": "https://source.unsplash.com/400x400/?rosegold,pendant",
-    "description": "Rose gold-plated pendant with matching chain, minimal design suited for everyday and office wear.<br/><i style=\"display:none; width:0; height:0;\"> Category: jewellery, pendant</i>"
+  {
+    "name": "Emerald Green Pendant",
+    "price": 899,
+    "image": "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=600&auto=format&fit=crop&q=80",
+    "description": "Elegant emerald green cubic zirconia pendant with anti-tarnish stainless steel chain and premium gold plating. Perfect for everyday elegance.<br/><i style=\"display:none; width:0; height:0;\"> Category: anti tarnish jewellery, pendant</i>"
   },
-    {
-    "name": "Rose Gold Pendant Set",
-    "price": 4499,
-    "image": "https://source.unsplash.com/400x400/?rosegold,pendant",
-    "description": "Rose gold-plated pendant with matching chain, minimal design suited for everyday and office wear.<br/><i style=\"display:none; width:0; height:0;\"> Category: jewellery, pendant</i>"
+  {
+    "name": "Crystal Stud Earrings",
+    "price": 499,
+    "image": "https://images.unsplash.com/photo-1635767798638-3e25273a8236?w=600&auto=format&fit=crop&q=80",
+    "description": "Premium anti-tarnish crystal stud earrings crafted from stainless steel with long-lasting gold plating. Lightweight, waterproof, and hypoallergenic.<br/><i style=\"display:none; width:0; height:0;\"> Category: anti tarnish jewellery, earrings</i>"
+  },
+  {
+    "name": "Butterfly Pendant Necklace",
+    "price": 899,
+    "image": "https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=600&auto=format&fit=crop&q=80",
+    "description": "Beautiful butterfly pendant necklace with anti-tarnish gold plating and stainless steel construction. Waterproof and suitable for daily styling.<br/><i style=\"display:none; width:0; height:0;\"> Category: anti tarnish jewellery, necklace</i>"
+  },
+  {
+    "name": "Minimal Gold Bracelet",
+    "price": 749,
+    "image": "https://images.unsplash.com/photo-1626784215021-2e39ccf971cd?w=600&auto=format&fit=crop&q=80",
+    "description": "Minimal anti-tarnish bracelet with premium stainless steel and 18K gold plating. Fade-resistant, waterproof, and perfect for stacking.<br/><i style=\"display:none; width:0; height:0;\"> Category: anti tarnish jewellery, bracelet</i>"
+  },
+  {
+    "name": "Heart Charm Necklace",
+    "price": 999,
+    "image": "https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=600&auto=format&fit=crop&q=80",
+    "description": "Heart charm necklace featuring anti-tarnish stainless steel construction with luxurious gold plating. Lightweight and elegant.<br/><i style=\"display:none; width:0; height:0;\"> Category: anti tarnish jewellery, necklace</i>"
+  },
+  {
+    "name": "CZ Tennis Bracelet",
+    "price": 1399,
+    "image": "https://images.unsplash.com/photo-1626784215021-2e39ccf971cd?w=600&auto=format&fit=crop&q=80",
+    "description": "Sparkling cubic zirconia tennis bracelet with anti-tarnish finish. Waterproof, hypoallergenic, and crafted for lasting shine.<br/><i style=\"display:none; width:0; height:0;\"> Category: anti tarnish jewellery, bracelet</i>"
+  },
+  {
+    "name": "Twisted Rope Chain",
+    "price": 899,
+    "image": "https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=600&auto=format&fit=crop&q=80",
+    "description": "Classic twisted rope chain necklace with anti-tarnish stainless steel and premium gold plating. Ideal for daily wear.<br/><i style=\"display:none; width:0; height:0;\"> Category: anti tarnish jewellery, chain</i>"
+  },
+  {
+    "name": "Adjustable Finger Ring",
+    "price": 549,
+    "image": "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&auto=format&fit=crop&q=80",
+    "description": "Modern adjustable anti-tarnish finger ring made from stainless steel with durable gold plating. Comfortable and waterproof.<br/><i style=\"display:none; width:0; height:0;\"> Category: anti tarnish jewellery, ring</i>"
   }
 ]
