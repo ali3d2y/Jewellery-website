@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Necklace Set",
+    "price": 45999,
+    "image": "https://source.unsplash.com/400x400/?gold,necklace",
+    "description": "Traditional 22 Carat gold necklace set.<br/><i style=\"display:none; width:0; height:0;\"> Category: jewellery, necklace</i>"
+  },
+  {
+    "name": "Diamond Solitaire Ring",
+    "price": 28999,
+    "image": "https://source.unsplash.com/400x400/?diamond,ring",
+    "description": "Elegant solitaire diamond ring in 18K white gold, certified diamond, ideal for engagements.<br/><i style=\"display:none; width:0; height:0;\"> Category: jewellery, ring</i>"
+  },
+  {
+    "name": "Sterling Silver Hoop Earrings",
+    "price": 1499,
+    "image": "https://source.unsplash.com/400x400/?silver,earrings",
+    "description": "925 Sterling Silver hoop earrings with cubic zirconia accents, lightweight and skin-friendly.<br/><i style=\"display:none; width:0; height:0;\"> Category: jewellery, earrings</i>"
+  },
+  {
+    "name": "Gold Plated Bangle Set",
+    "price": 3999,
+    "image": "https://source.unsplash.com/400x400/?gold,bangle",
+    "description": "Set of 4 gold-plated bangles with antique finish, suitable for daily wear and special occasions.<br/><i style=\"display:none; width:0; height:0;\"> Category: jewellery, bangles</i>"
+  },
+  {
+    "name": "Freshwater Pearl Necklace",
+    "price": 5999,
+    "image": "https://source.unsplash.com/400x400/?pearl,necklace",
+    "description": "Classic freshwater pearl necklace, 3-strand design, elegant and timeless for formal wear.<br/><i style=\"display:none; width:0; height:0;\"> Category: jewellery, necklace</i>"
+  },
+  {
+    "name": "Rose Gold Pendant Set",
+    "price": 4499,
+    "image": "https://source.unsplash.com/400x400/?rosegold,pendant",
+    "description": "Rose gold-plated pendant with matching chain, minimal design suited for everyday and office wear.<br/><i style=\"display:none; width:0; height:0;\"> Category: jewellery, pendant</i>"
+  },
+    {
+    "name": "Rose Gold Pendant Set",
+    "price": 4499,
+    "image": "https://source.unsplash.com/400x400/?rosegold,pendant",
+    "description": "Rose gold-plated pendant with matching chain, minimal design suited for everyday and office wear.<br/><i style=\"display:none; width:0; height:0;\"> Category: jewellery, pendant</i>"
+  },
+    {
+    "name": "Rose Gold Pendant Set",
+    "price": 4499,
+    "image": "https://source.unsplash.com/400x400/?rosegold,pendant",
+    "description": "Rose gold-plated pendant with matching chain, minimal design suited for everyday and office wear.<br/><i style=\"display:none; width:0; height:0;\"> Category: jewellery, pendant</i>"
+  },
+    {
+    "name": "Rose Gold Pendant Set",
+    "price": 4499,
+    "image": "https://source.unsplash.com/400x400/?rosegold,pendant",
+    "description": "Rose gold-plated pendant with matching chain, minimal design suited for everyday and office wear.<br/><i style=\"display:none; width:0; height:0;\"> Category: jewellery, pendant</i>"
+  }
+]

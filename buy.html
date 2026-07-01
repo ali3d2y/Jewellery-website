@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | NxtGen</title>
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="buy.css" />
+    <style>
+      /* Item Row Container */
+      .item-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+        background: #ffffff;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .item-row:hover {
+        transform: translateY(-2px);
+      }
+
+      /* Item Details */
+      .item-details {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .item-details h4 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 2px;
+      }
+
+      .item-details p {
+        font-size: 14px;
+        color: #666;
+      }
+
+      /* Item Total Price */
+      .item-price {
+        font-size: 16px;
+        font-weight: bold;
+        color: #222;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 600px) {
+        .item-row {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 12px;
+        }
+
+        .item-price {
+          margin-top: 6px;
+        }
+      }
+      @media (max-width: 768px) {
+        /* Targets mobile screens */
+        #upi-label {
+          margin-left: -20vw !important;
+        }
+      }
+      @media (max-width: 768px) {
+        h1 {
+          margin-top: -0.5vh !important;
+          margin: auto;
+        }
+      }
+      @media (min-width: 768px) {
+        header .container {
+          height: 5vh;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Header (same as index.html) -->
+    <header
+      class="text-white relative overflow-hidden"
+      style="
+        background: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(30, 30, 30, 0.95) 100%
+        );
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      "
+    >
+      <!-- Glossy overlay -->
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent pointer-events-none"
+      ></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-transparent via-white/5 to-white/10 pointer-events-none"
+      ></div>
+      <div class="container mx-auto px-4 py-3 flex items-center">
+        <h1 class="-mt-8 -pt-8" style="margin-top: 4vh">
+          <a href="https://luxorer.com/">
+          <img
+            src="/assets/ms.png"
+            alt="NxtGen"
+            style="height: 30px; width: auto"
+          />
+          </a>
+        </h1>
+        <nav class="ml-auto">
+          <ul class="flex space-x-6">
+            <li>
+              <a href="/" class="hover:underline"
+                ><i class="fas fa-home"></i> Home</a
+              >
+            </li>
+            <li>
+              <a href="/cart.html" class="hover:underline"
+                ><i class="fas fa-shopping-cart"></i> Cart</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 bg-none">
+        <!-- Order Summary -->
+        <div
+          class="bg-white p-6 rounded-lg shadow"
+          style="
+            background: linear-gradient(
+              135deg,
+              rgba(30, 30, 30, 0.95) 0%,
+              rgba(15, 15, 15, 0.98) 100%
+            );
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.6s ease-out forwards;
+          "
+        >
+          <h2 class="text-xl font-bold mb-4">Order Summary</h2>
+          <div id="order-items" class="mb-6">
+            <!-- Items will be loaded from cart -->
+          </div>
+          <div class="border-t border-gray-200 pt-4">
+            <div class="flex justify-between mb-2" style="display: none">
+              <span>Subtotal:</span>
+              <span id="order-subtotal">₹0</span>
+            </div>
+            <div class="flex justify-between mb-2">
+              <span>Shipping:</span>
+              <span>₹0</span>
+            </div>
+            <div class="flex justify-between font-bold text-lg mt-4">
+              <span>Total:</span>
+              <span id="order-total">₹0</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payment Form -->
+        <div
+          class="bg-white p-6 rounded-lg shadow mt-10"
+          id="payment-form"
+          style="
+            background: linear-gradient(
+              135deg,
+              rgba(30, 30, 30, 0.95) 0%,
+              rgba(15, 15, 15, 0.98) 100%
+            );
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.6s ease-out forwards;
+            align-items: center;
+          "
+        >
+          <h2 class="text-xl font-bold mb-4">Payment Information</h2>
+          <form
+            id="checkout-form"
+            class="space-y-4"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="66d638eb-c73e-4c36-b031-017287305791"
+            />
+            <input
+              type="hidden"
+              name="subject"
+              value="New Order from NxtGen "
+            />
+            <input
+              type="hidden"
+              name="redirect"
+              value="https://nextgenelectra.netlify.app/payment"
+            />
+            <input
+              type="hidden"
+              name="order_details"
+              id="order-details-input"
+            />
+
+            <div>
+              <label for="name" class="block mb-1">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="form-control w-3"
+              />
+            </div>
+
+            <div>
+              <label for="phone" class="block mb-1">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                class="form-control w-full"
+              />
+            </div>
+
+            <div>
+              <label for="email" class="block mb-1">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control w-full"
+              />
+            </div>
+
+            <div>
+              <label for="address" class="block mb-1">Shipping Address</label>
+              <textarea
+                id="address"
+                name="address"
+                rows="3"
+                required
+                class="form-control w-full"
+              ></textarea>
+            </div>
+
+            <div>
+              <label for="upi" class="block mb-1">UPI ID</label>
+              <input
+                type="text"
+                id="upi"
+                name="upi"
+                required
+                class="form-control w-full"
+                placeholder="yourname@upi"
+              />
+            </div>
+
+            <!-- Payment Method -->
+            <div class="pt-4">
+              <h3 class="font-medium mb-3">Payment Method</h3>
+              <div style="margin-left: -10vw">
+                <div
+                  style="display: flex; align-items: center; text-align: left"
+                >
+                  <input
+                    type="radio"
+                    id="upi-payment"
+                    name="payment"
+                    value="upi"
+                    checked
+                  />
+                  <label for="upi-payment" id="upi-label">UPI Payment</label>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="h-captcha" data-captcha="true"></div> -->
+            <!-- hCaptcha Widget -->
+            <!-- <div class="h-captcha" data-sitekey="YOUR_HCAPTCHA_SITE_KEY"></div> -->
+
+            <button type="submit" class="btn-primary w-full py-3 rounded-lg">
+              Place Order
+            </button>
+          </form>
+
+          <!-- Web3Forms Client Script -->
+          <!-- <script
+            src="https://web3forms.com/client/script.js"
+            async
+            defer
+          ></script> -->
+          <!-- hCaptcha Script -->
+          <!-- <script
+            src="https://web3forms.com/client/script.js"
+            async
+            defer
+          ></script> -->
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-black text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="font-bold mb-4">Get to Know Us</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/about.html" class="hover:underline">About Us</a>
+              </li>
+              <li>
+                <a href="/contact.html" class="hover:underline">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-4">Make Money with Us</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">Sell products</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-4">Legal</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/policy.html" class="hover:underline"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-gray-600 text-center">
+          <p>&copy; 2023 NxtGen . All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- <script src="https://web3forms.com/client/script.js" async defer></script> -->
+    <script src="/js/buy.js"></script>
+  </body>
+</html>

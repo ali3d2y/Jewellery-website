@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NxtGen | Home</title>
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <meta
+      name="google-site-verification"
+      content="Z33vG6jgdG57kcNAeh8AyW0a6-R04f0fe_Uplne0u8c"
+    />
+    <style>
+      header {
+        margin-bottom: -10vh;
+        padding-right: -10vw !important;
+      }
+      .glass-search {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        color: white;
+      }
+
+      .glass-search::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .glass-search:focus {
+        outline: none;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      button:hover .shimmer {
+        left: 100%;
+      }
+      @media (min-width: 768px) {
+        header .container {
+          margin-bottom: -2vh;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 font-roboto">
+    <!-- Header -->
+    <header
+      class="text-white relative overflow-hidden"
+      style="
+        background: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(30, 30, 30, 0.95) 100%
+        );
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      "
+    >
+      <!-- Glossy overlay -->
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent pointer-events-none"
+      ></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-transparent via-white/5 to-white/10 pointer-events-none"
+      ></div>
+
+      <div
+        class="container mx-auto px-1 py-1 flex items-center -mt-8 relative z-10"
+        style="margin-top: -3vh"
+      >
+        <h1
+          class="-pt-8 -mt-4 sm:m-0"
+          style="margin-top: 4vh"
+          id="header-image"
+        >
+          <a href="https://luxorer.com/">
+            <img
+              src="/assets/ms.png"
+              alt="NxtGen"
+              style="
+                height: 30px;
+                width: auto;
+                filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+              "
+            />
+          </a>
+        </h1>
+
+        <div class="ml-10 flex-1">
+          <div class="flex">
+            <input
+              type="text"
+              class="w-full px-4 py-2 rounded-full w-80"
+              placeholder="Search..."
+              id="Search2"
+            />
+          </div>
+        </div>
+        <nav class="ml-10">
+          <ul class="flex space-x-6" id="navbar">
+            <li>
+              <a
+                href="/"
+                class="hover:underline transition-all duration-200"
+                style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3)"
+              >
+                <i class="fas fa-home"></i> Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="/cart.html"
+                class="hover:underline transition-all duration-200"
+                style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3)"
+              >
+                <i class="fas fa-shopping-cart"></i> Cart
+              </a>
+            </li>
+            <li>
+              <a
+                href="/buy.html"
+                class="hover:underline transition-all duration-200"
+                style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3)"
+              >
+                <i class="fas fa-credit-card"></i> Checkout
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+      <div id="notification-container" style="margin-top: 5vh"></div>
+      <section class="mb-10">
+        <div id="main-inside">
+          <h2 id="featured">Anti-Tarnish Jewellery Collection</h2>
+          
+          <!-- Carousel Container -->
+          <div class="relative w-full max-w-4xl mx-auto mb-8" style="margin-top: 10vh;">
+            <div class="relative bg-black rounded-lg overflow-hidden" style="height: 500px;">
+              <div class="carousel-wrapper" style="position: relative; width: 100%; height: 100%;">
+                <!-- Carousel Images -->
+                <div class="carousel-slide active" style="position: absolute; width: 100%; height: 100%; opacity: 1; transition: opacity 0.8s ease-in-out;">
+                  <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=1200&h=600&fit=crop" alt="Girl wearing anti-tarnish necklace" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="carousel-slide" style="position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 0.8s ease-in-out;">
+                  <img src="https://images.unsplash.com/photo-1515562141207-6811bcdd56cd?w=1200&h=600&fit=crop" alt="Girl wearing anti-tarnish bracelet" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="carousel-slide" style="position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 0.8s ease-in-out;">
+                  <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=1200&h=600&fit=crop" alt="Girl wearing anti-tarnish earrings" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="carousel-slide" style="position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 0.8s ease-in-out;">
+                  <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=1200&h=600&fit=crop" alt="Girl wearing anti-tarnish ring" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+
+                <!-- Previous Button -->
+                <button id="carousel-prev" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); z-index: 10; background: rgba(255, 255, 255, 0.3); border: none; color: white; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; font-size: 24px; transition: background 0.3s; backdrop-filter: blur(5px);" onmouseover="this.style.background='rgba(255, 255, 255, 0.5)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.3)'">
+                  ❮
+                </button>
+
+                <!-- Next Button -->
+                <button id="carousel-next" style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); z-index: 10; background: rgba(255, 255, 255, 0.3); border: none; color: white; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; font-size: 24px; transition: background 0.3s; backdrop-filter: blur(5px);" onmouseover="this.style.background='rgba(255, 255, 255, 0.5)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.3)'">
+                  ❯
+                </button>
+              </div>
+            </div>
+
+            <!-- Carousel Indicators -->
+            <div style="display: flex; justify-content: center; gap: 8px; margin-top: 16px;">
+              <span class="carousel-indicator active" style="width: 12px; height: 12px; border-radius: 50%; background: rgba(255, 255, 255, 0.6); cursor: pointer; transition: background 0.3s;"></span>
+              <span class="carousel-indicator" style="width: 12px; height: 12px; border-radius: 50%; background: rgba(255, 255, 255, 0.3); cursor: pointer; transition: background 0.3s;"></span>
+              <span class="carousel-indicator" style="width: 12px; height: 12px; border-radius: 50%; background: rgba(255, 255, 255, 0.3); cursor: pointer; transition: background 0.3s;"></span>
+              <span class="carousel-indicator" style="width: 12px; height: 12px; border-radius: 50%; background: rgba(255, 255, 255, 0.3); cursor: pointer; transition: background 0.3s;"></span>
+            </div>
+          </div>
+
+          <a href="cart.html" id="cart-button-index">
+            <button
+              style="
+                font-size: 1rem;
+                font-weight: 700;
+                padding: 1rem 2rem;
+                background: linear-gradient(
+                  135deg,
+                  rgba(30, 30, 30, 0.9) 0%,
+                  rgba(10, 10, 10, 0.95) 100%
+                );
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                color: #e5e5e5;
+                border: 1px solid rgba(255, 255, 255, 0.15);
+                border-top: 1px solid rgba(255, 255, 255, 0.25);
+                border-radius: 12px;
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+                text-align: center;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4),
+                  inset 0 1px 0 rgba(255, 255, 255, 0.1);
+                cursor: pointer;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                position: relative;
+                overflow: hidden;
+              "
+            >
+              <span style="position: relative; z-index: 1">Cart</span>
+              <span
+                style="
+                  position: absolute;
+                  top: 0;
+                  left: -100%;
+                  width: 100%;
+                  height: 100%;
+                  background: linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.1),
+                    transparent
+                  );
+                  transition: left 0.5s ease;
+                  pointer-events: none;
+                "
+                class="shimmer"
+              ></span>
+            </button>
+          </a>
+
+          <div
+            id="products-container"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          >
+            <!-- Products will be loaded dynamically from JSON -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="font-bold mb-4">Get to Know Us</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/about.html" class="hover:underline">About Us</a>
+              </li>
+              <li>
+                <a href="/contact.html" class="hover:underline">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-4">Make Money with Us</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">Sell products</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-4">Legal</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/policy.html" class="hover:underline"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-gray-600 text-center">
+          <p>&copy; 2023 NxtGen . All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+    <script>
+      // Carousel functionality
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.carousel-slide');
+      const indicators = document.querySelectorAll('.carousel-indicator');
+      const totalSlides = slides.length;
+
+      function showSlide(n) {
+        slides.forEach(slide => slide.style.opacity = '0');
+        indicators.forEach(ind => ind.style.background = 'rgba(255, 255, 255, 0.3)');
+        
+        slides[n].style.opacity = '1';
+        indicators[n].style.background = 'rgba(255, 255, 255, 0.6)';
+      }
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+      }
+
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
+      }
+
+      document.getElementById('carousel-next').addEventListener('click', nextSlide);
+      document.getElementById('carousel-prev').addEventListener('click', prevSlide);
+
+      indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+          currentSlide = index;
+          showSlide(currentSlide);
+        });
+      });
+
+      // Auto-advance carousel every 5 seconds
+      setInterval(nextSlide, 5000);
+
+      // Search functionality
+      document.addEventListener("DOMContentLoaded", () => {
+        const searchInput = document.getElementById("Search2");
+        const carouselContainer = document.querySelector('.relative.w-full.max-w-4xl');
+
+        // Hide carousel when user types in search box
+        searchInput.addEventListener('input', (e) => {
+          if (e.target.value.trim() !== '') {
+            carouselContainer.style.display = 'none';
+          } else {
+            carouselContainer.style.display = 'block';
+          }
+        });
+
+        const params = new URLSearchParams(window.location.search);
+        const searchValue = params.get("search");
+        if (!searchValue) return;
+
+        const interval = setInterval(() => {
+          const input = document.getElementById("Search2");
+          if (!input) return;
+
+          input.value = searchValue;
+          input.focus();
+          input.dispatchEvent(new Event("input", { bubbles: true }));
+          input.dispatchEvent(
+            new KeyboardEvent("keyup", { bubbles: true, key: "a" })
+          );
+
+          clearInterval(interval);
+        }, 500);
+      });
+    </script>
+  </body>
+</html>

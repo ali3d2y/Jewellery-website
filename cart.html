@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Cart | NxtGen</title>
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <style>
+      /* General Styles */
+      /* * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
+
+      body {
+        background-color: #f8f9fa;
+        padding: 20px;
+      } */
+
+      /* Cart Item Container */
+      .cart-item {
+        background: linear-gradient(
+          135deg,
+          rgba(30, 30, 30, 0.95) 0%,
+          rgba(15, 15, 15, 0.98) 100%
+        );
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        padding: 20px;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
+          inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 0.6s ease-out forwards;
+      }
+      /* .cart-item img{
+        width: 20vw;
+      } */
+      .cart-item:hover {
+        /* transform: translateY(-10px) scale(1.02); */
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6),
+          inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+
+      /* Image Container */
+      .cart-item .image-container {
+        flex-shrink: 0;
+        width: 30vw;
+        height: 30vh;
+        background: #f0f0f0;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .cart-item .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      /* Item Details */
+      .cart-item .details {
+        flex: 1;
+        margin-left: 16px;
+      }
+
+      .cart-item .details h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 4px;
+      }
+
+      .cart-item .details p {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 8px;
+      }
+
+      /* Price and Quantity Controls */
+      .cart-item .actions {
+        display: flex;
+        align-items: center;
+        margin-top: 8px;
+      }
+
+      .cart-item .price {
+        font-size: 18px;
+        font-weight: bold;
+        color: #222;
+      }
+
+      /* Quantity Controls */
+      .quantity-control {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        gap: 8px;
+      }
+
+      .quantity-btn {
+        width: 32px;
+        height: 32px;
+        background: #e0e0e0;
+        border: none;
+        border-radius: 6px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        cursor: pointer;
+        transition: background 0.2s, transform 0.1s;
+      }
+
+      .quantity-btn:hover {
+        background: #d6d6d6;
+      }
+
+      .quantity-btn:active {
+        transform: scale(0.95);
+      }
+
+      .quantity-display {
+        font-size: 16px;
+        font-weight: 500;
+        color: #222;
+      }
+
+      /* Remove Button */
+      .remove-btn {
+        background: none;
+        border: none;
+        font-size: 18px;
+        color: #e63946;
+        cursor: pointer;
+        margin-left: 16px;
+        transition: color 0.2s, transform 0.1s;
+      }
+
+      .remove-btn:hover {
+        color: #d62828;
+      }
+
+      .remove-btn:active {
+        transform: scale(0.9);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 600px) {
+        .cart-item {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .cart-item .image-container {
+          width: 100%;
+          height: auto;
+          max-height: 120px;
+        }
+
+        .cart-item .details {
+          width: 100%;
+          margin-left: 0;
+          margin-top: 10px;
+        }
+
+        .cart-item .actions {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .quantity-control {
+          margin-top: 6px;
+        }
+      }
+      @media (max-width: 768px) {
+        h1 {
+          margin-top: -0.5vh !important;
+          margin: auto;
+        }
+        #cart-items p {
+          width: 100%;
+        }
+        #cart-item {
+          width: 100%;
+        }
+      }
+      h3 {
+        color: #e5e5e5;
+      }
+      body header {
+        background: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(30, 30, 30, 0.95) 100%
+        );
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        margin-top: -10vh;
+      }
+      @media (min-width: 768px) {
+        #cart-item {
+          width: 60%;
+        }
+        header .container {
+          height: 5vh;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Header (same as index.html) -->
+    <header class="text-white relative overflow-hidden">
+      <!-- Glossy overlay -->
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent pointer-events-none"
+      ></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-transparent via-white/5 to-white/10 pointer-events-none"
+      ></div>
+      <div class="container mx-auto px-4 py-3 flex items-center">
+        <h1 class="-mt-8 -pt-8" style="margin-top: 4vh">
+          <a href="https://luxorer.com/">
+          <img
+            src="/assets/ms.png"
+            alt="NxtGen"
+            style="height: 30px; width: auto"
+          />
+          </a>
+        </h1>
+        <nav class="ml-auto">
+          <ul class="flex space-x-6">
+            <li>
+              <a href="/" class="hover:underline"
+                ><i class="fas fa-home"></i> Home</a
+              >
+            </li>
+            <li>
+              <a href="/buy.html" class="hover:underline"
+                ><i class="fas fa-credit-card"></i> Checkout</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+      <div id="main-inside" class="">
+        <h2>Your Shopping Cart</h2>
+
+        <div id="cart-items" class="mb-8">
+          <!-- Cart items will be loaded here -->
+          <div class="text-center py-10">
+            <p class="text-gray-500">Your cart is empty</p>
+            <a href="/" class="text-[#0066C0] hover:underline mt-2 inline-block"
+              >Continue shopping</a
+            >
+          </div>
+        </div>
+
+        <div id="cart-summary" class="border-t border-gray-200 pt-4 hidden">
+          <div class="flex justify-between items-center mb-4">
+            <span class="font-medium">Subtotal:</span>
+            <span id="subtotal" class="font-bold">₹0</span>
+          </div>
+          <button id="checkout-btn" class="w-full btn-primary py-3 rounded-lg">
+            Proceed to Checkout
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-black text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="font-bold mb-4">Get to Know Us</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/about.html" class="hover:underline">About Us</a>
+              </li>
+              <li>
+                <a href="/contact.html" class="hover:underline">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-4">Make Money with Us</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">Sell products</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-4">Legal</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/policy.html" class="hover:underline"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-gray-600 text-center">
+          <p>&copy; 2023 NxtGen . All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/cart.js"></script>
+  </body>
+</html>

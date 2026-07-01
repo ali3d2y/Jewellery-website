@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | NxtGen</title>
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <style>
+      @media (max-width: 768px) {
+        h1 {
+          margin-top: -0.5vh !important;
+          margin: auto;
+        }
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .form-container {
+        max-width: 500px;
+        width: 100%;
+        background: none;
+        padding: inherit;
+      }
+
+      .contact-form {
+        background: linear-gradient(
+          135deg,
+          rgba(30, 30, 30, 0.95) 0%,
+          rgba(15, 15, 15, 0.98) 100%
+        );
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        padding: 40px;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
+          inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        animation: fadeInUp 0.6s ease-out forwards;
+        color: #fff;
+      }
+
+      .form-title {
+        margin: 0 0 30px 0;
+        font-size: 28px;
+        font-weight: 700;
+        text-align: center;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .form-group {
+        margin-bottom: 24px;
+      }
+
+      .form-label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.9);
+        letter-spacing: 0.5px;
+      }
+
+      .form-input,
+      .form-textarea {
+        width: 100%;
+        padding: 14px 16px;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        font-size: 15px;
+        background: rgba(255, 255, 255, 0.05);
+        color: #fff;
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+        font-family: inherit;
+      }
+
+      .form-input:focus,
+      .form-textarea:focus {
+        outline: none;
+        border-color: #667eea;
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+      }
+
+      .form-input::placeholder,
+      .form-textarea::placeholder {
+        color: rgba(255, 255, 255, 0.4);
+      }
+
+      .form-textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+
+      .form-button {
+        width: 100%;
+        padding: 16px;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+
+      .form-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+      }
+
+      .form-button:active {
+        transform: translateY(0);
+      }
+
+      .form-button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .success-message {
+        display: none;
+        padding: 16px;
+        margin-bottom: 20px;
+        background: rgba(34, 197, 94, 0.2);
+        border: 1px solid rgba(34, 197, 94, 0.5);
+        border-radius: 10px;
+        color: #4ade80;
+        text-align: center;
+        font-weight: 600;
+      }
+
+      .error-message {
+        display: none;
+        padding: 16px;
+        margin-bottom: 20px;
+        background: rgba(239, 68, 68, 0.2);
+        border: 1px solid rgba(239, 68, 68, 0.5);
+        border-radius: 10px;
+        color: #f87171;
+        text-align: center;
+        font-weight: 600;
+      }
+
+      @media (max-width: 600px) {
+        .contact-form {
+          padding: 30px 20px;
+        }
+
+        .form-title {
+          font-size: 24px;
+        }
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes iconPulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+      }
+
+      .animate-fade-in-up {
+        animation: fadeInUp 0.6s ease-out forwards;
+      }
+
+      .info-item:hover .icon-wrapper {
+        animation: iconPulse 0.6s ease-in-out;
+      }
+
+      .glass-dark {
+        background: linear-gradient(
+          135deg,
+          rgba(30, 30, 30, 0.95) 0%,
+          rgba(15, 15, 15, 0.98) 100%
+        );
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+
+      .glass-item {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+      @media (min-width: 768px) {
+        header .container {
+          margin-top: -3vh;
+          margin-bottom: -3vh;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Header (same as index.html) -->
+    <header
+      class="text-white relative overflow-hidden"
+      style="
+        background: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(30, 30, 30, 0.95) 100%
+        );
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      "
+    >
+      <!-- Glossy overlay -->
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent pointer-events-none"
+      ></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-transparent via-white/5 to-white/10 pointer-events-none"
+      ></div>
+      <div class="container mx-auto px-4 py-3 flex items-center">
+        <h1 class="-mt-8 -pt-8" style="margin-top: 4vh">
+          <a href="https://luxorer.com/">
+          <img
+            src="/assets/ms.png"
+            alt="NxtGen"
+            style="height: 30px; width: auto"
+          />
+          </a>
+        </h1>
+        <nav class="ml-auto">
+          <ul class="flex space-x-6">
+            <li>
+              <a href="/" class="hover:underline"
+                ><i class="fas fa-home"></i> Home</a
+              >
+            </li>
+            <li>
+              <a href="/about.html" class="hover:underline"
+                ><i class="fas fa-info-circle"></i> About</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16" class="main-inside">
+        <div
+          class="bg-white p-6 rounded-lg shadow border-none"
+          id="support"
+          style="margin-top: 5vh"
+        >
+          <h2 class="text-xl font-bold mb-4">Our Information</h2>
+          <div class="space-y-4">
+            <div>
+              <h3 class="font-medium">
+                <i class="fas fa-map-marker-alt mr-2"></i> Address
+              </h3>
+              <p class="text-gray-600 mt-1">
+                Batla House Chowk, New Delhi, 110025, India
+              </p>
+            </div>
+
+            <div>
+              <h3 class="font-medium">
+                <i class="fas fa-phone-alt mr-2"></i> Phone
+              </h3>
+              <p class="text-gray-600 mt-1">+91 8851287394</p>
+            </div>
+
+            <div>
+              <h3 class="font-medium">
+                <i class="fas fa-envelope mr-2"></i> Email
+              </h3>
+              <p class="text-gray-600 mt-1">nextgenelectra@outlook.com</p>
+            </div>
+
+            <div>
+              <!-- <h3 class="font-medium">
+                <i class="fas fa-clock mr-2"></i> Business Hours
+              </h3> -->
+              <!-- <p class="text-gray-600 mt-1">Tuesday - Sunday: 11AM - 8PM (Closed Mondays)</p> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="form-container" style="box-shadow: none">
+          <form
+            id="contactForm"
+            class="contact-form"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+          >
+            <h2 class="form-title">Get In Touch</h2>
+
+            <div class="success-message" id="successMessage">
+              ✓ Message sent successfully! We'll get back to you soon.
+            </div>
+
+            <div class="error-message" id="errorMessage">
+              ✗ Something went wrong. Please try again.
+            </div>
+
+            <input
+              type="hidden"
+              name="access_key"
+              value="66d638eb-c73e-4c36-b031-017287305791"
+            />
+            <input
+              type="hidden"
+              name="subject"
+              value="Contact Form Submission"
+            />
+            <input type="checkbox" name="botcheck" style="display: none" />
+
+            <div class="form-group">
+              <label for="name" class="form-label">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-input"
+                placeholder="John Doe"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-input"
+                placeholder="john@example.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea
+                id="message"
+                name="message"
+                class="form-textarea"
+                placeholder="Write your message here..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="form-button" id="submitBtn">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-black text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="font-bold mb-4">Get to Know Us</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/about.html" class="hover:underline">About Us</a>
+              </li>
+              <li>
+                <a href="/contact.html" class="hover:underline">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-4">Make Money with Us</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">Sell products</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-4">Legal</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="/policy.html" class="hover:underline"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-gray-600 text-center">
+          <p>&copy; 2023 NxtGen . All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
